@@ -1,5 +1,3 @@
-set number
-set cursorline
 syntax enable
 set hlsearch
 set incsearch
@@ -12,6 +10,8 @@ set expandtab
 set smarttab
 set laststatus=2
 set backspace=2
+set number 
+set cursorline
 
 let mapleader = "\<Space>"
 inoremap { {}<LEFT>
@@ -19,17 +19,17 @@ inoremap [ []<LEFT>
 inoremap ( ()<LEFT>
 inoremap " ""<LEFT>
 inoremap ' ''<LEFT>
+inoremap ; <ESC>A;<RIGHT>
 inoremap <silent> jj <ESC>
 map <Space><Space> o<ESC>
-
 map H ^
 map L $
+map t gt
+map T gT
 
 " neovim terminal mapping
 nnoremap @t :tabe<CR>:terminal<CR>
 tnoremap <silent> jj  <C-\><C-n>
-
-
 " slim 
 autocmd BufRead,BufNewFile *.slim setfiletype slim
 
@@ -62,7 +62,6 @@ NeoBundle "airblade/vim-gitgutter"
 NeoBundle "Shougo/deoplete.nvim"
 NeoBundle "Shougo/neco-syntax"
 NeoBundle "Shougo/deoplete-clangx"
-NeoBundle "kristijanhusak/deoplete-phpactor"
 NeoBundle "takkii/Bignyanco"
 "----------------------------------------------------------
 call neobundle#end()
@@ -112,7 +111,7 @@ endif
 " NerdTree
 "----------------------------------------------------------
 map <C-n> :NERDTreeToggle<CR>
-autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif"")
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif""
 ""----------------------------------------------------------
 " tpope/vim-fugitive 
 "----------------------------------------------------------
