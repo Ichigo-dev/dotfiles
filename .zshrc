@@ -1,0 +1,1 @@
+/home/ichigo/dotfiles/.bashrc
