@@ -63,6 +63,7 @@ NeoBundle "Shougo/deoplete.nvim"
 NeoBundle "Shougo/neco-syntax"
 NeoBundle "Shougo/deoplete-clangx"
 NeoBundle "takkii/Bignyanco"
+NeoBundle "w0rp/ale"
 "----------------------------------------------------------
 call neobundle#end()
 filetype plugin indent on
@@ -83,7 +84,7 @@ let g:lightline = {
       \ 'colorscheme': 'wombat',
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ],
-      \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
+      \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ],
       \ },
       \ 'component_function': {
       \   'gitbranch': 'FugitiveHead'
@@ -132,3 +133,19 @@ map <leader>pl :Gpull<CR>
 "----------------------------------------------------------
 let g:deoplete#enable_at_startup = 1
 let g:nvim_typescript#vue_support = 1
+""----------------------------------------------------------
+" ale 
+"----------------------------------------------------------
+let g:ale_linters = {
+\   'javascript': ['eslint'],
+\}
+let g:ale_fixers = {
+\   'javascript': ['prettier', 'eslint'],
+\   'css': ['prettier'],
+\   'ruby': ['rubocop'],
+\}
+
+let g:ale_ruby_rubocop_executable = 'bundle'
+
+nmap <silent> <C-k> <Plug>(ale_previous_wrap)
+nmap <silent> <C-j> <Plug>(ale_next_wrap)
