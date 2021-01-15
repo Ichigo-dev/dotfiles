@@ -9,6 +9,8 @@ export SDKMAN_DIR="/home/ichigo/.sdkman"
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
+export DISPLAY=localhost:0.0
+export "LIBGL_ALWAYS_INDIRECT=1"
 
  # prompt
 PROMPT='%F{blue}%m@%n%f %F{red}%~%f$ '
@@ -17,9 +19,7 @@ PROMPT='%F{blue}%m@%n%f %F{red}%~%f$ '
 setopt IGNOREEOF
 
 # 補完
-if [ -e /usr/local/share/zsh-completions ]; then
-    fpath=(/usr/local/share/zsh-completions $fpath)
-fi
+fpath=(/usr/local/share/zsh-completions $fpath)
 autoload -U compinit
 compinit -u
 
@@ -41,8 +41,10 @@ alias v='nvim'
 alias so='source'
 alias ...='cd ../..'
 alias ....='cd ../../..'
+alias g='cd ~/git'
+alias py='python3'
+alias xset='export DISPLAY='
 
-alias g='git'
 alias gs='git status'
 alias gb='git branch'
 alias gc='git checkout'

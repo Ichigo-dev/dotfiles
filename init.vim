@@ -64,6 +64,9 @@ NeoBundle "Shougo/neco-syntax"
 NeoBundle "Shougo/deoplete-clangx"
 NeoBundle "takkii/Bignyanco"
 NeoBundle "w0rp/ale"
+NeoBundle "Rigellute/shades-of-purple.vim"
+NeoBundle "Zabanaa/neuromancer.vim"
+NeoBundle "w0ng/vim-hybrid"
 "----------------------------------------------------------
 call neobundle#end()
 filetype plugin indent on
@@ -71,11 +74,9 @@ NeoBundleCheck
 "----------------------------------------------------------
 " molokai
 "----------------------------------------------------------
-if neobundle#is_installed('molokai') 
-    colorscheme molokai 
-endif
-set t_Co=256 
-
+"set background=dark
+colorscheme 
+"set t_Co=256 
 "----------------------------------------------------------
 " CtrlP
 "----------------------------------------------------------
