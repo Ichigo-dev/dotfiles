@@ -2,6 +2,8 @@ export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 export PATH="$HOME/.nodenv/bin:$PATH"
 eval "$(nodenv init -)"
+export PATH="$HOME/.goenv/bin:$PATH"
+eval "$(goenv init -)"
 PATH="$PATH:/usr/bin/vim"
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="/home/ichigo/.sdkman"
