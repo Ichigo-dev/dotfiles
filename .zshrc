@@ -40,12 +40,14 @@ cdpath=(~)
 
 alias ovim='vim'
 alias v='nvim'
+alias memo='nvim ~/git/md'
 alias so='source'
 alias ...='cd ../..'
 alias ....='cd ../../..'
 alias g='cd ~/git'
 alias py='python3'
-alias xset='export DISPLAY='
+alias r='bin/rails'
+alias xset='export DISPLAY'
 
 alias gs='git status'
 alias gb='git branch'
