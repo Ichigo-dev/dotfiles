@@ -72,10 +72,10 @@ call neobundle#end()
 filetype plugin indent on
 NeoBundleCheck
 "----------------------------------------------------------
-" molokai
+" colorcheme
 "----------------------------------------------------------
 "set background=dark
-colorscheme 
+colorscheme shades_of_purple 
 "set t_Co=256 
 "----------------------------------------------------------
 " CtrlP
@@ -113,7 +113,7 @@ endif
 " NerdTree
 "----------------------------------------------------------
 map <C-n> :NERDTreeToggle<CR>
-autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif""
+"autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif""
 ""----------------------------------------------------------
 " tpope/vim-fugitive 
 "----------------------------------------------------------
@@ -122,6 +122,7 @@ map <leader>gs :Gstatus<CR><C-w>T
 map <leader>gl :Git log<CR><C-w>T
 map <leader>a :Gwrite<CR>
 map <leader>c :Gcommit<CR>
+map <leader>d :Gdiff<CR>
 map <leader>ph :Gpush<CR>
 map <leader>pl :Gpull<CR>
 ""----------------------------------------------------------
@@ -145,7 +146,6 @@ let g:ale_fixers = {
 \   'css': ['prettier'],
 \   'ruby': ['rubocop'],
 \}
-
 let g:ale_ruby_rubocop_executable = 'bundle'
 
 nmap <silent> <C-k> <Plug>(ale_previous_wrap)
