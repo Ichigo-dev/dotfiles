@@ -12,6 +12,8 @@ set laststatus=2
 set backspace=2
 set number 
 set cursorline
+set termguicolors
+set pumblend=10
 
 let mapleader = "\<Space>"
 inoremap { {}<LEFT>
@@ -78,9 +80,9 @@ NeoBundleCheck
 "----------------------------------------------------------
 " colorcheme
 "----------------------------------------------------------
-"set background=dark
-colorscheme shades_of_purple 
-"set t_Co=256 
+set background=dark
+colorscheme hybrid
+set t_Co=256 
 "----------------------------------------------------------
 " CtrlP
 "----------------------------------------------------------
