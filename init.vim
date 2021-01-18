@@ -73,6 +73,7 @@ NeoBundle "w0rp/ale"
 NeoBundle "Rigellute/shades-of-purple.vim"
 NeoBundle "Zabanaa/neuromancer.vim"
 NeoBundle "w0ng/vim-hybrid"
+NeoBundle "overcache/NeoSolarized"
 "----------------------------------------------------------
 call neobundle#end()
 filetype plugin indent on
@@ -80,15 +81,14 @@ NeoBundleCheck
 "----------------------------------------------------------
 " colorcheme
 "----------------------------------------------------------
-set background=dark
-colorscheme hybrid
-set t_Co=256 
+set background=light
+colorscheme NeoSolarized
 "----------------------------------------------------------
 " CtrlP
 "----------------------------------------------------------
 
 let g:lightline = {
-      \ 'colorscheme': 'wombat',
+      \ 'colorscheme': 'solarized',
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ],
       \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ],
