@@ -21,6 +21,10 @@ inoremap " ""<LEFT>
 inoremap ' ''<LEFT>
 inoremap ; <ESC>A;<RIGHT>
 inoremap <silent> jj <ESC>
+inoremap <C-k> <Up>
+inoremap <C-j> <Down>
+inoremap <C-l> <Right>
+inoremap <C-h> <Left>
 map <Space><Space> o<ESC>
 map H ^
 map L $
