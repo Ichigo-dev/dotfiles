@@ -14,7 +14,9 @@ eval "$(pyenv init -)"
 export DISPLAY=localhost:0.0
 export "LIBGL_ALWAYS_INDIRECT=1"
 
- # prompt
+eval $(/opt/homebrew/bin/brew shellenv)
+
+# prompt
 PROMPT='%F{blue}%m@%n%f %F{red}%~%f$ '
 
 # Ctrl+Dでログアウトしてしまうことを防ぐ
