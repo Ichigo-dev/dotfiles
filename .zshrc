@@ -3,6 +3,7 @@ eval "$(rbenv init -)"
 export PATH="$HOME/.nodenv/bin:$PATH"
 eval "$(nodenv init -)"
 export PATH="$HOME/.goenv/bin:$PATH"
+export GOENV_DISABLE_GOPATH=1
 eval "$(goenv init -)"
 PATH="$PATH:/usr/bin/vim"
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
@@ -40,9 +41,8 @@ setopt auto_cd
 # どこからでも参照できるディレクトリパス
 cdpath=(~)
 
-alias ovim='vim'
-alias v='nvim'
-alias memo='nvim ~/git/md'
+alias v='vim'
+alias memo='vim ~/git/md'
 alias so='source'
 alias ...='cd ../..'
 alias ....='cd ../../..'

@@ -13,7 +13,6 @@ set backspace=2
 set number 
 set cursorline
 set termguicolors
-set pumblend=10
 
 let mapleader = "\<Space>"
 inoremap { {}<LEFT>
@@ -34,7 +33,7 @@ map t gt
 map T gT
 
 " neovim terminal mapping
-nnoremap @t :tabe<CR>:terminal<CR>
+nnoremap [t :tabe<CR>:terminal<CR>
 tnoremap <silent> jj  <C-\><C-n>
 " slim 
 autocmd BufRead,BufNewFile *.slim setfiletype slim
@@ -65,10 +64,6 @@ NeoBundle 'mattn/emmet-vim'
 NeoBundle "slim-template/vim-slim"
 NeoBundle "tpope/vim-endwise"
 NeoBundle "airblade/vim-gitgutter"
-""NeoBundle "Shougo/deoplete.nvim"
-""NeoBundle "Shougo/neco-syntax"
-""NeoBundle "Shougo/deoplete-clangx"
-""NeoBundle "takkii/Bignyanco"
 NeoBundle "w0rp/ale"
 NeoBundle "Rigellute/shades-of-purple.vim"
 NeoBundle "Zabanaa/neuromancer.vim"
@@ -82,11 +77,10 @@ NeoBundleCheck
 "----------------------------------------------------------
 " colorcheme
 "----------------------------------------------------------
+let g:solarized_termcolors=256
 set background=light
 colorscheme solarized
-let g:solarized_termcolors=256
 "----------------------------------------------------------
-"
 " CtrlP
 "----------------------------------------------------------
 
