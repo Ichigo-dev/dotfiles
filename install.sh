@@ -1,4 +1,3 @@
-#! /usr/bin/zsh 
-ln -s init.vim ~/.config/nvim/init.vim
-ln -s .zshrc ~/.zshrc
- 
+#! /usr/bin/bash
+ln -sf ~/dotfiles/.bashrc ~/.bashrc
+ln -sf ~/dotfiles/.vimrc ~/.vimrc
